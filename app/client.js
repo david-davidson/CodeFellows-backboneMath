@@ -3,8 +3,6 @@ var FormView = require('./views/FormView');
 var $ = require('jquery');
 Backbone.$ = $;
 
+// Spit out the default view
 var formView = new FormView();
-
-console.log(formView.$el);
-
 $('#form').html(formView.$el);

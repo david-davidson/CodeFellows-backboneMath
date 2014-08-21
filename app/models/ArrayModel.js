@@ -2,6 +2,7 @@ var Backbone = require('backbone');
 var $ = require('jquery');
 Backbone.$ = $;
 
+// Pull in the math
 var meanMedianMode = require('../meanMedianMode');
 var mean = meanMedianMode.mean;
 var median = meanMedianMode.median;
@@ -13,6 +14,7 @@ var ArrayModel = Backbone.Model.extend({
 		median: [],
 		mode: []
 	},
+	// Set methods
 	meanify: mean,
 	medianify: median,
 	modeify: mode
