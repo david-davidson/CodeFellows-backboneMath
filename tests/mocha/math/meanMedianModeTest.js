@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var meanMedianMode = require('../../../app/meanMedianMode');
+var meanMedianMode = require('../../../app/math/meanMedianMode');
 var mean = meanMedianMode.mean;
 var median = meanMedianMode.median;
 var mode = meanMedianMode.mode;
