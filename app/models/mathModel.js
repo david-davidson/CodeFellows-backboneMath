@@ -3,7 +3,9 @@ var $ = require('jquery');
 Backbone.$ = $;
 
 // Pull in the math
-var meanMedianMode = require('../meanMedianMode');
+var meanMedianMode = require('../math/meanMedianMode');
+var validNumbers = require('../math/validNumbers');
+
 
 var MathModel = Backbone.Model.extend({
 	defaults : {
@@ -14,7 +16,8 @@ var MathModel = Backbone.Model.extend({
 	// Set methods
 	meanify: meanMedianMode.mean,
 	medianify: meanMedianMode.median,
-	modeify: meanMedianMode.mode
+	modeify: meanMedianMode.mode,
+	validate: validNumbers
 });
 
 module.exports = MathModel;
