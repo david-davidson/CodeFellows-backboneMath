@@ -63,10 +63,10 @@ module.exports = function(grunt) {
 		'jshint',
 		'browserify:test',
 		'mocha:backbonetest',
+		'exec:mocha',
 		'clean:dev',
 		'browserify:dev',
 		'copy:dev',
-		'exec:mocha',
 		'exec:start'
 	]);
 };
