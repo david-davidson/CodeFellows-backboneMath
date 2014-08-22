@@ -1,5 +1,5 @@
 var Backbone = require('backbone');
-var FormView = require('./views/FormView');
+var FormView = require('./views/formView');
 var $ = require('jquery');
 Backbone.$ = $;
 
