@@ -25,8 +25,9 @@ FormView = Backbone.View.extend({
 		var numbers = this.$el.closest('div').children('#numbers').val();
 		numbers = numbers.split(' ').map(Number);
 
-		// Set up a model, and use its methods to populate it
+		// Set up a model, and use its methods to validate and populate it
 		var results = new MathModel();
+		if (!results.validate(numbers)) return false;
 		results.set('mean', results.meanify(numbers));
 		results.set('median', results.medianify(numbers));
 		results.set('mode', results.modeify(numbers));
